@@ -17,12 +17,12 @@ whisperAudio = whisper.load_audio("C:/Users/Yuan Ern/Desktop/audio-summary/testi
 # This moves the audio to the same device as the model (cuda if enabled)
 mel = whisper.log_mel_spectrogram(whisperAudio).to(whisperModel.device)
 
-whisperResult = str(whisperModel.transcribe(whisperAudio, language = "Chinese"))# Specify language when possible
+whisperResult = str(whisperModel.transcribe(whisperAudio, language = "Chinese"))# Specify language when possible (Boosts Accuracy of transcription)
 
 # Context for the data. This will be passed on to ChatGPT
-audioTopic = "a meeting session for trial balance dashboard review session" # What was the audio about?
-partiesInvolved = "developer and client" # To whom did the voices in the audio belong to?
-actionToDo = "summarize this meeting into meeting minutes. Point form with more details into the topics" # What do u want to be done with this information
+audioTopic = "" # What was the audio about?
+partiesInvolved = "" # To whom did the voices in the audio belong to?
+actionToDo = "" # What do u want to be done with this information
 prompt = "This is " + audioTopic + " between " + partiesInvolved + "." + actionToDo
 
 # Settings for the model
