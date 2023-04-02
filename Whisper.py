@@ -12,7 +12,7 @@ openai.api_key = secret_file.readline()
 secret_file.close()
 
 whisperModel = whisper.load_model("medium")
-whisperAudio = whisper.load_audio("C:/Users/Yuan Ern/Desktop/audio-summary/testing.mp3")# Path to file here
+whisperAudio = whisper.load_audio("")# Path to file here
 
 # This moves the audio to the same device as the model (cuda if enabled)
 mel = whisper.log_mel_spectrogram(whisperAudio).to(whisperModel.device)
