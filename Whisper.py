@@ -4,7 +4,7 @@ import openai
 import time
 
 # Timing the program
-startTime = time.time()
+startTime = time.perf_counter()
 
 # API Key from OpenAI
 secret_file = open("API.txt", "r")
@@ -37,5 +37,5 @@ postTransform = json.loads(preTransform)
 answer = postTransform["message"]["content"]
 
 print (answer)
-print ("Completed in", time.strftime("%H:%M:%S", time.gmtime(time.time() - startTime)))
+print ("Completed in", time.strftime("%H:%M:%S", time.gmtime(time.perf_counter() - startTime)))
 
