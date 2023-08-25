@@ -1,5 +1,5 @@
 # audio-summary
-Summarizes a given audio file using whisper (transcription) and BART(summarizer)
+Summarizes a given audio file using whisper (transcription) and BART(summarizer). GUI Provided.
 
 How to use:
 Install Chocolatey: https://chocolatey.org/install, and then install FFMPEG. 
